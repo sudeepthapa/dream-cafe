@@ -1,0 +1,19 @@
+.button{
+    padding: .5rem 1rem;
+    border: none;
+    background: $color-primary;
+    color: #fff;
+    transition: all .3s;
+    .fa{
+        transition: all .3s;
+
+    }
+
+    &:hover .fa{
+        transform: translateX(4px);
+    }
+
+    &:focus, &:hover{
+        background-color: darken($color: $color-primary, $amount: 10)
+    }
+}
