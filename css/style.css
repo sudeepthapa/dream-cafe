@@ -1,6 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Trirong',serif; }
 
+.img {
+  width: 100%;
+  display: block; }
+
 .button {
   padding: .5rem 1rem;
   border: none;
@@ -13,6 +17,16 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(4px); }
   .button:focus, .button:hover {
     background-color: #d7770f; }
+
+.heading {
+  font-weight: bold;
+  margin: 0;
+  line-height: .9; }
+  .heading--1 {
+    font-size: 4rem;
+    color: #f09029; }
+  .heading--2 {
+    font-size: 2rem; }
 
 .navbar {
   background-color: #fff;
@@ -103,31 +117,33 @@ h1, h2, h3, h4, h5, h6 {
           background-image: url(./../images/coffee.jpg); }
           #discover .wrapper .images .image:nth-child(4):hover {
             background-image: linear-gradient(#0004, #0006), url(./../images/coffee.jpg); }
-    #discover .wrapper h4 {
-      font-weight: bold; }
 
 #special {
   padding: 4rem 0; }
-  #special h4 {
-    font-weight: bold; }
   #special .items {
     margin-top: 4rem;
     display: grid;
     grid-column-gap: 3rem;
     grid-template-columns: repeat(3, 1fr); }
+    #special .items .card:hover .des h6 {
+      color: #f09029; }
+    #special .items .card:hover .image img {
+      transform: scale(1.1); }
     #special .items .image {
       width: 100%;
       height: 180px;
       overflow: hidden; }
       #special .items .image img {
-        width: 100%; }
+        width: 100%;
+        transition: transform .3s; }
     #special .items .des {
       width: 100%;
       padding: 1rem;
       display: flex;
       justify-content: space-between; }
       #special .items .des h6 {
-        font-weight: bold; }
+        font-weight: bold;
+        transition: color .3s; }
     #special .items p {
       padding: 0 1rem; }
   #special .special-item {
@@ -154,6 +170,59 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         margin: 0;
         line-height: .9; }
+
+#chef {
+  padding: 6rem 0;
+  background-color: #f5f5f5; }
+  #chef .chef-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    justify-content: center; }
+    #chef .chef-container .chef {
+      position: relative;
+      background-color: #7e7e7e;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      perspective: 100px; }
+      #chef .chef-container .chef .image {
+        height: 400px;
+        width: 100%;
+        padding-left: 2rem; }
+        #chef .chef-container .chef .image img {
+          display: inline-block;
+          height: 100%; }
+      #chef .chef-container .chef .content {
+        height: 100px;
+        position: absolute;
+        padding: 1rem;
+        padding-top: 2rem;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.794);
+        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform .4s;
+        color: #f5f5f5;
+        -webkit-backface-visibility: hidden;
+        overflow: hidden; }
+        #chef .chef-container .chef .content h5, #chef .chef-container .chef .content h6 {
+          opacity: 0;
+          transition: opacity .4s;
+          transition-delay: .3s;
+          -webkit-backface-visibility: hidden; }
+      #chef .chef-container .chef--1 {
+        border-radius: 40px 0 40px 40px; }
+      #chef .chef-container .chef--3 {
+        border-radius: 0px 40px 40px 40px; }
+      #chef .chef-container .chef:hover {
+        cursor: pointer; }
+        #chef .chef-container .chef:hover .content {
+          transform: scaleY(1); }
+          #chef .chef-container .chef:hover .content h5, #chef .chef-container .chef:hover .content h6 {
+            opacity: 1; }
 
 *, html {
   margin: 0;

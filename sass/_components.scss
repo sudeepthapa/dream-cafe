@@ -1,19 +1,37 @@
-.button{
+.button {
     padding: .5rem 1rem;
     border: none;
     background: $color-primary;
     color: #fff;
     transition: all .3s;
-    .fa{
+
+    .fa {
         transition: all .3s;
 
     }
 
-    &:hover .fa{
+    &:hover .fa {
         transform: translateX(4px);
     }
 
-    &:focus, &:hover{
+    &:focus,
+    &:hover {
         background-color: darken($color: $color-primary, $amount: 10)
+    }
+}
+
+
+.heading {
+    font-weight: bold;
+    margin: 0;
+    line-height: .9;
+
+    &--1 {
+        font-size: 4rem;
+        color: $color-primary;
+    }
+
+    &--2 {
+        font-size: 2rem;
     }
 }
