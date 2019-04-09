@@ -159,16 +159,14 @@
     padding: 4rem 0;
 
     .items {
-        margin-top: 4rem;
-        display: grid;
-        grid-column-gap: 3rem;
-        grid-template-columns: repeat(3, 1fr);
+        @include col3;
 
-        .card:hover .des h6{
-            color:$color-primary;
+        .card:hover .des h6 {
+            color: $color-primary;
         }
-        .card:hover .image img{
-            transform:scale(1.1);  
+
+        .card:hover .image img {
+            transform: scale(1.1);
         }
 
         .image {
@@ -247,33 +245,36 @@
         grid-column-gap: 2rem;
 
         justify-content: center;
+
         .chef {
             position: relative;
             background-color: rgb(126, 126, 126);
             overflow: hidden;
             -webkit-backface-visibility: hidden;
             perspective: 100px;
-            
 
-            .image{
+
+            .image {
                 height: 400px;
                 width: 100%;
                 padding-left: 2rem;
-                img{
+
+                img {
                     display: inline-block;
                     height: 100%;
                 }
             }
-            .content{
+
+            .content {
                 height: 100px;
                 position: absolute;
                 padding: 1rem;
                 padding-top: 2rem;
                 text-align: center;
-                bottom:0;
+                bottom: 0;
                 width: 100%;
                 background: rgba(0, 0, 0, 0.794);
-                clip-path: polygon(0 25%, 100% 0,100% 100%,0 100%);
+                clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
                 transform: scaleY(0);
                 transform-origin: bottom;
                 transition: transform .4s;
@@ -281,32 +282,156 @@
                 -webkit-backface-visibility: hidden;
                 overflow: hidden;
 
-                h5,h6{
+                h5,
+                h6 {
                     opacity: 0;
                     transition: opacity .4s;
                     transition-delay: .3s;
                     -webkit-backface-visibility: hidden;
 
                 }
-                
+
             }
-            &--1{
+
+            &--1 {
                 border-radius: 40px 0 40px 40px;
             }
-            &--3{
+
+            &--3 {
                 border-radius: 0px 40px 40px 40px;
             }
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
-                .content{
+
+                .content {
                     transform: scaleY(1);
 
-                    h5,h6{
+                    h5,
+                    h6 {
                         opacity: 1;
                     }
                 }
             }
         }
     }
+}
+
+
+#contact {
+    padding: 6rem 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url("../images/grapes.jpg");
+    background-size: cover;
+    background-position: 0 0;
+    background-attachment: fixed;
+
+    form {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        color: #fff;
+        display: block;
+        width: 100%;
+        padding: .5rem 1rem;
+        background: transparent;
+        margin-bottom: 1rem;
+
+        &::-webkit-input-placeholder {
+            color: #fffa;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
+    }
+
+    .labelled {
+        position: relative;
+    }
+
+    .datepickerLabel {
+        position: absolute;
+        right: .8rem;
+        top: .5rem;
+        color: #fff;
+    }
+
+    .button {
+        display: block;
+        margin: auto;
+    }
+
+}
+
+
+#blog {
+    padding: 6rem 0;
+
+    p {
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .blog-items {
+        @include col3;
+        width: 100%;
+
+        .card:hover .image img {
+            transform: scale(1.1);
+        }
+
+        .image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: transform .3s;
+            }
+        }
+
+        & h6 {
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem 0 .3rem 0;
+        }
+
+        .des {
+            font-size: 12px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-primary;
+            font-weight: bold;
+            padding: .1rem 0;
+            text-align: left;
+            margin-top: .4rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid transparent;
+            transition: all .3s;
+
+            &:hover {
+                color: darken($color: $color-primary, $amount: 10);
+                border-bottom: 1px solid $color-primary;
+            }
+        }
+    }
+
+
+}
+
+#reservation {
+    padding: 6rem 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url("../images/roll.jpg");
+    background-size: cover;
+    background-position: center center;
 }

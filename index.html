@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Maitree:400,500,600|Trirong:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Dream Cafe</title>
 </head>
@@ -195,7 +196,95 @@
     </section>
 
 
-    
+    <section id="contact">
+        <div class="container">
+            <h4 class="mb-3 text-center heading heading--2 text-white">Make a Reservetion</h4>
+            <p class="mb-5 m-auto text-center w-50 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur
+                iste
+                nostrum aspernatur provident i.
+            </p>
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" name="name" placeholder="Your Name" id="">
+                        <input type="text" name="place" id="" placeholder="Your Place">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="email" name="name" placeholder="Your Email" id="">
+                        <div class="labelled">
+                            <input type="text" id="datepicker" placeholder="Select Date"><label for="datepicker"
+                                class="datepickerLabel"><i class="fas fa-caret-down"></i></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-1">
+                    <textarea name="desc" id="" cols="30" rows="8"
+                        placeholder="Give the short dscription about the reservation."></textarea>
+                </div>
+                <button class="button mt-2">Book a table <i class="fa fa-arrow-right"></i></button>
+            </form>
+
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h4 class="mb-3 text-center heading heading--2">Recent Blogs</h4>
+            <p class="mb-5 m-auto text-center w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                iste
+                nostrum aspernatur provident id
+                fugit nulla ex mollitia unde vitae.</p>
+            <div class="blog-items">
+                <div class="card">
+                    <div class="image">
+                        <img src="./images/grapes.jpg" alt="">
+                    </div>
+                    <h6>Five tips for daily cooking</h6>
+                    <div class="des text-muted mb-3">
+                        <p>Posted By: Lorem</p>
+                        <p>Jan 7, 2018</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit amet consectetur adipisicing eli Error, voluptate.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./images/wine.jpg" alt="">
+                    </div>
+                    <h6>Making food that taste good</h6>
+                    <div class="des text-muted mb-3">
+                        <p>Posted By: Lorem</p>
+                        <p>Jan 7, 2018</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit amet consectetur adipisicing eli Error, voluptate.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./images/roll.jpg" alt="">
+                    </div>
+                    <h6>Being of own taste</h6>
+                    <div class="des text-muted mb-3">
+                        <p>Posted By: Lorem</p>
+                        <p>Jan 7, 2018</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit amet consectetur adipisicing eli Error, voluptate.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+    </section>
+
+    <section id="reservation">
+        <div class="container">
+            <div class="content d-flex justify-content-around align-items-center">
+                    <h4 class="text-center heading heading--2 text-white">Need to organize any party or seminar?</h4>
+                    <button class="button">Contact us <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
@@ -210,6 +299,8 @@
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/popper.js/dist/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

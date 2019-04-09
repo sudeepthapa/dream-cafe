@@ -5,6 +5,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   display: block; }
 
+.text-white {
+  color: #fff; }
+
 .button {
   padding: .5rem 1rem;
   border: none;
@@ -27,6 +30,19 @@ h1, h2, h3, h4, h5, h6 {
     color: #f09029; }
   .heading--2 {
     font-size: 2rem; }
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  max-width: 1800px;
+  margin: 0 auto; }
+
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Maitree', serif;
+  color: #4a4a4a; }
 
 .navbar {
   background-color: #fff;
@@ -208,7 +224,8 @@ h1, h2, h3, h4, h5, h6 {
         color: #f5f5f5;
         -webkit-backface-visibility: hidden;
         overflow: hidden; }
-        #chef .chef-container .chef .content h5, #chef .chef-container .chef .content h6 {
+        #chef .chef-container .chef .content h5,
+        #chef .chef-container .chef .content h6 {
           opacity: 0;
           transition: opacity .4s;
           transition-delay: .3s;
@@ -221,16 +238,90 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer; }
         #chef .chef-container .chef:hover .content {
           transform: scaleY(1); }
-          #chef .chef-container .chef:hover .content h5, #chef .chef-container .chef:hover .content h6 {
+          #chef .chef-container .chef:hover .content h5,
+          #chef .chef-container .chef:hover .content h6 {
             opacity: 1; }
 
-*, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+#contact {
+  padding: 6rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../images/grapes.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed; }
+  #contact form {
+    margin-top: 3rem;
+    width: 100%; }
+  #contact input,
+  #contact textarea {
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    background: transparent;
+    margin-bottom: 1rem; }
+    #contact input::-webkit-input-placeholder,
+    #contact textarea::-webkit-input-placeholder {
+      color: #fffa; }
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: none;
+      border-color: #f09029; }
+  #contact .labelled {
+    position: relative; }
+  #contact .datepickerLabel {
+    position: absolute;
+    right: .8rem;
+    top: .5rem;
+    color: #fff; }
+  #contact .button {
+    display: block;
+    margin: auto; }
 
-body {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'Maitree', serif;
-  color: #4a4a4a; }
+#blog {
+  padding: 6rem 0; }
+  #blog p {
+    margin: 0;
+    padding: 0 1rem; }
+  #blog .blog-items {
+    margin-top: 4rem;
+    display: grid;
+    grid-column-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%; }
+    #blog .blog-items .card:hover .image img {
+      transform: scale(1.1); }
+    #blog .blog-items .image {
+      width: 100%;
+      height: 180px;
+      overflow: hidden; }
+      #blog .blog-items .image img {
+        width: 100%;
+        transition: transform .3s; }
+    #blog .blog-items h6 {
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 1rem 0 .3rem 0; }
+    #blog .blog-items .des {
+      font-size: 12px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between; }
+    #blog .blog-items a {
+      text-decoration: none;
+      color: #f09029;
+      font-weight: bold;
+      padding: .1rem 0;
+      text-align: left;
+      margin-top: .4rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid transparent;
+      transition: all .3s; }
+      #blog .blog-items a:hover {
+        color: #d7770f;
+        border-bottom: 1px solid #f09029; }
+
+#reservation {
+  padding: 6rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../images/roll.jpg");
+  background-size: cover;
+  background-position: center center; }
