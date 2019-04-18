@@ -38,7 +38,7 @@ $(document).ready(function(){
 
         });
     }, {
-            offset: '95%'
+            offset: '100%'
     });
     $('#discover').waypoint(function() {
         anime({
@@ -48,7 +48,7 @@ $(document).ready(function(){
             easing: 'easeInOutSine'
         });
     }, {
-            offset: '95%'
+            offset: '100%'
     });
     $('#discover').waypoint(function() {
         anime({
@@ -58,6 +58,6 @@ $(document).ready(function(){
             easing: 'easeInOutSine'
         });
     }, {
-            offset: '95%'
+            offset: '100%'
     });
 });
