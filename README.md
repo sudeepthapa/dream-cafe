@@ -1,6 +1,6 @@
-# DreamCafa - Clean Design
+# DreamCafe - Clean Design
 
-### HTML, CSS, Bootstrap, Animejs, AOS(Animate On Scroll)
+### HTML, SASS, Bootstrap, Animejs, AOS(Animate On Scroll)
 
 ###Screenshots
 
